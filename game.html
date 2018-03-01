@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <title>max's adventure</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/MyGridStyle.css">
+    <style>
+      .accordion {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 450px;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+      }
+
+      .mainmenu {
+        width: 100px;
+        height: 54px;
+        padding: 0 46px;
+      }
+
+      .optionsmenu {
+      position: absolute;
+      }
+
+      .help {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 100px;
+        height: 54px;
+        padding-left: 47px;
+      }
+
+      .panel {
+          width: 450px;
+          padding: 0 0px;
+          display: none;
+          overflow: hidden;
+          background-color: rgba(210,210,210,0.3);
+      }
+
+      .helpmenu {
+        position: absolute;
+        right: 0px;
+        top: 54px;
+        z-index: 3;
+        padding: 0 22px;
+      }
+
+      .active, .accordion:hover {
+          background-color: rgba(180, 180, 180,0.3); 
+      }
+
+    </style>
+
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <body>
+    <header>
+      <div id="header">
+        Max's adventure
+      </div>
+    </header>
+    <nav>
+        <ul>
+          <li id="home">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+          </li>
+          <li id="game">
+            <a href="game.html"><i class="fas fa-gamepad"></i></a>
+          </li>
+          <li id="reflection">
+            <a href="reflection.html"><i class="fas fa-sticky-note"></i></a>
+          </li>
+          <li id="lastyear">
+            <a href="https://stevensonmt.github.io/elliotSTEM/page3.html"><i class="fas fa-calendar-minus"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="optionsmenu">
+        <button class="accordion mainmenu">&#x2261</button>
+        <div class="panel">
+          <button class="accordion">hair color</button>
+          <div class="haircolor panel">
+            <button onclick="set_color(green);add_hair()">hair color Green</button>
+            <button onclick="set_color(blue);add_hair()">hair color Blue</button>
+            <button onclick="set_color(red);add_hair()">hair color Red</button>
+            <button onclick="set_color(brown);add_hair()">hair color brown</button>
+          </div>
+          <br>
+          <button class="accordion">hair styles</button>
+          <div class="hairstyles panel">
+            <button onclick="set_style(horns);add_hair()">hair style Horns</button>
+            <button onclick="set_style(spiky);add_hair()">hair style Spiky</button>
+            <button onclick="set_style(cowlick);add_hair()">hair style Cowlick</button>
+            <button onclick="set_style(afro);add_hair()">hair style afro</button>
+
+          </div>
+          <br>
+          <button class="accordion">shirt color</button>
+          <div class="shirtcolor panel">
+            <button onclick="set_shirt_color(green);updatebody()">green shirt</button>
+            <button onclick="set_shirt_color(blue);updatebody()">blue shirt</button>
+            <button onclick="set_shirt_color(red);updatebody()">red shirt</button> 
+            <button onclick="set_shirt_color(brown);updatebody()">brown shirt</button>
+            <button onclick="set_shirt_color(black);updatebody()">black shirt</button>
+          </div>
+        </div>
+      </div>
+      <button class="accordion mainmenu help">&#x2753</button>
+      <div class="panel helpmenu" style="background-color: rgba(210,210,210,0.3);">
+        <ul>
+          <li>Use the menu in the top left to change your appearance.</li>
+          <li>You can move around by using the arrow keys.</li>
+          <li>To go back where you started you can press HOME key.</li>
+          <li>To save a new starting position press the INSERT key.</li>
+          <li>To reset to the original starting point press the DELETE key.</li>
+          <li>You can also do things like:
+            <ul>
+              <li>J for jump</li>
+              <li>S for spin</li>
+              <li>F for flip</li>
+              <li>C for cartwheel</li>
+              <li>W for wave(hello or good by)</li>
+              <li>Y for yes(head nod)</li>
+              <li>N for no(head shake)</li>
+              <li>ESC for reset</li>
+            </ul>
+        </ul>
+      </div>
+        <script src="http://gamingJS.com/Three.js"></script>
+  <script src="http://gamingJS.com/ChromeFixes.js"></script>
+  <script src="assets/shirt.js"></script>
+  <script src="assets/hairstyles.js"></script>
+  <script src="assets/avatar.js"></script>
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      });
+  }
+  </script>
+
+      <footer>
+        &copy;Elliott Stevenson
+      </footer>
+  </body>
+</html>

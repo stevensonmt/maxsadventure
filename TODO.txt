@@ -1,0 +1,10 @@
+1. Options to customize shirt and pants colors. --defer pants for now
+2. Floating collapsible menu for setting hair, shirt, pants options -- should make use of radio buttons and should automatically update onClick
+done
+3. Create help menu that shows all commands for moving, saving last position, going home, resetting home -- DONE
+4. Create text input for interacting with avatar -- needs to have the ability to respond yes, no, maybe (shrug), and wave hello/goodbye.
+5. Make a face (eyes, nose, mouth) for avatar with customizations as for the hair/shirt/pants  -- DONE
+6. maybe new motions such as wink, blink, roll eyes, smile, frown, cry, stick out tongue.
+7. Create 'index.html' that links to last year's project and links to the game and the description of the process and future plans.
+8. Upload to github or other host.
+

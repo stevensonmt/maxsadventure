@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Elliott STEM 2018</title>
+
+<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/MyGridStyle.css">
+
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        Max's adventure
+        </div>
+    </header>
+    
+      <nav>
+        <ul>
+          <li id="home">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+          </li>
+          <li id="game">
+            <a href="game.html"><i class="fas fa-gamepad"></i></a>
+          </li>
+          <li id="reflection">
+            <a href="reflection.html"><i class="fas fa-sticky-note"></i></a>
+          </li>
+          <li id="lastyear">
+            <a href="https://stevensonmt.github.io/elliotSTEM/page3.html"><i class="fas fa-calendar-minus"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div id="content">
+        First I started following the book from Chris Strom <a href="https://www.goodreads.com/book/show/17346985-3d-game-programming-for-kids">3D Game Programming for Kids</a>.
+        I learned how to make 3D shapes in JavaScript using the Three.JS library. Once I learned how to make simple 3D shapes I put them together to make a more complex shape to make my avatar and the trees in the background. Then I learned how to move the avatar in various ways such as flipping, spinning and cartwheeling. Then after I learned how to do that I started to learn how to use keydown events to trigger movements. Some special keydown events are reseting the position of the avatar, going home to the original spot the avatar was in , loading a new home and deleteing a loaded home to get back to the origanal home.
+        <br>
+        Another thing I learned is how to update the avatar when somene makes a modifacation like changing the hair color, changing the hair style and changing the shirt color. One of the hardest things that I did was making repetitive movements stop automatically. How I did that was by making a sleep function to put on the keydown events for wave, headshake and headnod so when one of these three gets pressed wave, headshake or headnod = true then after 2000 milliseconds (2 seconds) wave, headshake or headnod = false.
+        <br>
+        There are a couple of bugs. One of them is that the pupil sometimes don't show up all the time. One of the possible reasons why they don't show up is because when the computer trys to draw the pupil's since the face is rounded the pupil is flat and is hidden by the face. Another bug is that when you push the jump button while the avatar is in the air he won't come all the way down. That is because when you press J for jump he starts adding by four until he gets to 80 then he subtracts by four untill he gets to 0, but when you press J while he is coming down he trys to add by four to get to 80 while the first jump is trying to get to 0 so neither jump will ever finish until you reset to 0 so the second jump can finish.
+        <br>
+        Following the book was fairly easy but things got more difficult when I started to make modifacations by myself.
+        I might want to learn more about Three.Js to make more complex images and games. Also I might want to finish the book.
+      </div>
+
+    
+      <footer>
+        &copy;Elliott Stevenson
+    </footer>
+  </html>
